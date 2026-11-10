@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "group": "Research",
+      "title": "FHIRE Collaborative",
+      "role": "Research Assistant \u00b7 Spring 2026\u2013present",
+      "description": "Community-engaged psychological research centering Black girls and women, including qualitative coding, data organization, and research support.",
+      "contact": "Principal Investigator: Dr. Seanna Leath \u00b7 leath@wustl.edu",
+      "url": "https://fhirelab.org/",
+      "image": "/media/fhire.jpg"
+    },
+    {
+      "group": "Research",
+      "title": "Personality, Mental Health & AI Lab",
+      "role": "Research Assistant \u00b7 Spring 2026\u2013present",
+      "description": "Research on personality, mental health, and artificial intelligence, including literature reviews, interviews, and research support.",
+      "contact": "Principal Investigator: Dr. Joshua Oltmanns \u00b7 j.oltmanns@wustl.edu",
+      "url": "https://www.oltmannsj.com/team",
+      "image": "/media/pmhai.jpg"
+    },
+    {
+      "group": "Research",
+      "title": "M(ai)cro in the Media: Black College Women\u2019s Identity Reconstruction",
+      "role": "Oral presentation \u00b7 Society for the Psychological Study of Social Issues (SPSSI) \u00b7 2026",
+      "description": "Co-presented research on Black college women\u2019s identity reconstruction with lead author Mykah Doolin. The peer coaching program was a formal component of the study.",
+      "contact": "Co-presenter: Mykah Doolin \u00b7 d.mykah@wustl.edu",
+      "url": "",
+      "image": "/media/spssi.jpg"
+    },
+    {
+      "group": "Leadership",
+      "title": "ProjectHER, Inc.",
+      "role": "Chief Operating Officer",
+      "description": "Supporting nonprofit operations and initiatives empowering Black girls and young women through mentorship, education, leadership development, career exploration, and community engagement.",
+      "contact": "",
+      "url": "https://linktr.ee/projectherwashu",
+      "image": "/media/projecther.jpg"
+    },
+    {
+      "group": "Leadership",
+      "title": "ProjectHER Collegiate at WashU",
+      "role": "Founder & Founding President \u00b7 August 2026\u2013present",
+      "description": "Founded the collegiate chapter to advance mentorship, professional development, civic engagement, and community-building.",
+      "contact": "",
+      "url": "https://www.instagram.com/projecther.washu/",
+      "image": ""
+    },
+    {
+      "group": "Leadership",
+      "title": "WashU Student Union",
+      "role": "Senator \u00b7 External Communications Chair",
+      "description": "Student representation, university governance, and communications.",
+      "contact": "",
+      "url": "",
+      "image": ""
+    },
+    {
+      "group": "Arts",
+      "title": "WashU Black Anthology",
+      "role": "Assistant Director \u00b7 August 2026\u2013present",
+      "description": "Collaborative theatre production and storytelling through the performing arts.",
+      "contact": "",
+      "url": "",
+      "image": ""
+    },
+    {
+      "group": "Advocacy",
+      "title": "Education Equalizers Foundation",
+      "role": "Student Intern",
+      "description": "Education-equity advocacy, including federal policy engagement concerning Pell Grants and FAFSA.",
+      "contact": "",
+      "url": "",
+      "image": ""
+    },
+    {
+      "group": "Advocacy",
+      "title": "Black Voters Matter",
+      "role": "Civic Engagement Intern",
+      "description": "Nonpartisan voter encouragement, outreach, and community engagement in Gainesville, Florida.",
+      "contact": "",
+      "url": "",
+      "image": ""
+    },
+    {
+      "group": "Advocacy",
+      "title": "Missouri House Democrats Action Fund",
+      "role": "Field Intern",
+      "description": "Field organizing, canvassing, phone and text banking, and volunteer recruitment in targeted Missouri districts.",
+      "contact": "",
+      "url": "",
+      "image": ""
+    },
+    {
+      "group": "Advocacy",
+      "title": "Wendy Goss School Board Campaign",
+      "role": "Campaign Volunteer",
+      "description": "Community outreach and voter-contact support for a St. Louis school board campaign.",
+      "contact": "",
+      "url": "",
+      "image": ""
+    },
+    {
+      "group": "Advocacy",
+      "title": "Malik Moore Campaign",
+      "role": "Campaign Intern",
+      "description": "Canvassing, flyer distribution, and phone banking.",
+      "contact": "",
+      "url": "",
+      "image": ""
+    }
+  ]
+}
