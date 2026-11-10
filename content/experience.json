@@ -90,13 +90,16 @@
       "title": "Wendy Goss School Board Campaign",
       "role": "Campaign Volunteer",
       "description": "Community outreach and voter-contact support for a St. Louis school board campaign.",
-      "url": "https://ballotpedia.org/Wendy_Goss"
+      "url": "https://ballotpedia.org/Wendy_Goss",
+      "image": "/media/wendygoss.jpg"
     },
     {
       "group": "Advocacy",
       "title": "Malik Moore Campaign",
       "role": "Campaign Intern",
-      "description": "Canvassing, flyer distribution, and phone banking."
+      "description": "Canvassing, flyer distribution, and phone banking.",
+      "url": "https://www.mooreforfl.com/",
+      "image": "/media/malikmoore.avif"
     }
   ]
 }
