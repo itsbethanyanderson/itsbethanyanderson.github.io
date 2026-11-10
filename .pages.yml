@@ -1,0 +1,62 @@
+
+media:
+  input: media
+  output: /media
+
+content:
+  - name: profile
+    label: My Profile and Links
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: tagline, label: Tagline, type: string }
+      - { name: headline, label: Main Headline, type: string }
+      - { name: intro, label: Introduction, type: text }
+      - { name: bio, label: About Me, type: text }
+      - { name: email, label: Email, type: string }
+      - { name: linkedin, label: LinkedIn, type: string }
+      - { name: facebook, label: Facebook, type: string }
+      - { name: instagram, label: Instagram, type: string }
+      - { name: substack, label: Substack, type: string }
+      - { name: portrait, label: Portrait, type: image }
+      - { name: projecther_logo, label: ProjectHER Logo, type: image }
+      - { name: projecther_url, label: ProjectHER URL, type: string }
+
+  - name: experience
+    label: Research, Leadership and Activities
+    type: file
+    path: content/experience.json
+    format: json
+    fields:
+      - name: items
+        label: Experiences
+        type: object
+        list: true
+        fields:
+          - { name: group, label: Section, type: string }
+          - { name: title, label: Organization, type: string }
+          - { name: role, label: Role and Dates, type: string }
+          - { name: description, label: Description, type: text }
+          - { name: contact, label: Investigator or Collaborator, type: string }
+          - { name: url, label: Website URL, type: string }
+          - { name: image, label: Image, type: image }
+
+  - name: opportunities
+    label: Opportunity Hub
+    type: file
+    path: content/opportunities.json
+    format: json
+    fields:
+      - name: items
+        label: Opportunities
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Opportunity Name, type: string }
+          - { name: organization, label: Organization, type: string }
+          - { name: category, label: Category, type: string }
+          - { name: url, label: Application Link, type: string }
+          - { name: notes, label: Notes, type: text }
+          - { name: status, label: Status, type: string }
