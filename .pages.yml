@@ -60,3 +60,21 @@ content:
           - { name: url, label: Application Link, type: string }
           - { name: notes, label: Notes, type: text }
           - { name: status, label: Status, type: string }
+
+  - name: articles
+    label: Articles & Essays
+    type: file
+    path: content/articles.json
+    format: json
+    fields:
+      - name: items
+        label: Published Articles
+        type: object
+        list: true
+        fields:
+          - { name: title, label: Article Title, type: string }
+          - { name: category, label: Category, type: string }
+          - { name: description, label: Short Description, type: text }
+          - { name: image, label: Cover Image, type: image }
+          - { name: url, label: Substack Article Link, type: string }
+          - { name: date, label: Publication Date, type: date }
