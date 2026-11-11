@@ -59,7 +59,7 @@ fetch('content/articles.json')
     $('articlecards').innerHTML = (data.items || []).map(article => `
       <article class="card">
         ${article.image
-          ? `<img src="${esc(image(article.image))}" alt="${esc(article.title)}">`
+          ? `<img src="${esc(article.image?.startsWith('/media/') ? article.image.slice(1) : image(article.image))}" alt="${esc(article.title)}">`
           : ''}
         <div class="cardbody">
           <div class="meta">${esc(article.category || '')}</div>
