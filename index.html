@@ -6,7 +6,33 @@
 <section id="about"><div class="wrap"><div class="eyebrow">About me</div><h2>Curiosity with a purpose.</h2><div class="bio" id="bio"></div><p class="intro"><strong>Washington University in St. Louis · Class of 2029</strong><br>Double major: Psychological & Brain Sciences and Political Science · Minor: Drama</p></div></section>
 <section class="alt" id="research"><div class="wrap"><div class="eyebrow">Research & scholarship</div><h2>Questions worth studying.<br>Work meant to matter.</h2><p class="intro">Research, community-engaged scholarship, and academic presentations.</p><div class="cards" id="researchcards"></div></div></section>
 <section id="leadership"><div class="wrap"><div class="eyebrow">Leadership, advocacy & the arts</div><h2>Building with and for community.</h2><div class="featured"><img id="projecther" src="media/projecther.jpg" alt="ProjectHER logo"><div><h3>ProjectHER</h3><p>Chief Operating Officer, ProjectHER, Inc. · Founder & Founding President, ProjectHER Collegiate at WashU</p><p>Mentorship, education, leadership development, career exploration, professional development, and community engagement for Black girls and young women.</p><a id="projectlink" target="_blank" rel="noopener">Explore ProjectHER ↗</a></div></div><div class="cards" id="leadershipcards"></div></div></section>
-<section class="alt" id="writing"><div class="wrap"><div class="eyebrow">Writing & ideas</div><h2>Beyond the Individual</h2><div class="writing"><h3>Exploring people, policy, and social change.</h3><p class="intro">Read essays, reflections, and commentary on my Substack.</p><a id="substack" class="button" target="_blank" rel="noopener">Read my Substack ↗</a></div></div></section>
+
+<section class="alt" id="writing">
+  <div class="wrap">
+    <div class="eyebrow">Writing & ideas</div>
+    <h2>Beyond the Individual</h2>
+
+    <div class="writing">
+      <h3>Exploring people, policy, and social change.</h3>
+      <p class="intro">
+        Read essays, reflections, and commentary on my Substack.
+      </p>
+      <a id="substack" class="button" target="_blank" rel="noopener">
+        Read my Substack ↗
+      </a>
+    </div>
+
+    <h3 style="margin-top:45px;font-size:28px;">
+      Articles & Essays
+    </h3>
+    <p class="intro">
+      A collection of my published writing on psychology,
+      politics, culture, and the human experience.
+    </p>
+
+    <div class="cards" id="articlecards"></div>
+  </div>
+</section>
 <section id="opportunities"><div class="wrap"><div class="eyebrow">Opportunity hub</div><h2>Your next opportunity starts here.</h2><p class="intro">An expanding collection of internships, fellowships, research programs, leadership pipelines, nonprofit resources, and civic engagement opportunities.</p><div class="note"><strong>Important:</strong> This is a curated directory, not a real-time job board. Listings may be closed or change. Verify availability, eligibility, deadlines, and compensation directly with each organization before applying.</div><input id="search" class="search" placeholder="Search organizations, opportunities, or fields…"><div id="filters" class="filters"></div><div class="oppgrid" id="oppgrid"></div></div></section>
 <section class="alt" id="contact"><div class="wrap"><div class="eyebrow">Connect</div><h2>Let's work together.</h2><p class="intro">For research collaborations, nonprofit partnerships, speaking engagements, professional opportunities, and conversations.</p><a id="email" class="button">Email me</a><div class="socials" id="socials"></div></div></section>
 <footer class="footer"><div class="wrap">© <span id="year"></span> Bethany Anderson · Independent personal website and curated resources. <a href="#home">Back to top ↑</a></div></footer>
@@ -23,6 +49,32 @@ $('socials').innerHTML=[['LinkedIn',s.linkedin],['Instagram',s.instagram],['Face
 function card(x){return '<article class="card">'+(x.image?'<img src="'+esc(image(x.image))+'" alt="'+esc(x.title)+'">':'')+'<div class="cardbody"><div class="meta">'+esc(x.role)+'</div><h3>'+esc(x.title)+'</h3><p>'+esc(x.description)+'</p>'+(x.contact?'<p><strong>'+esc(x.contact)+'</strong></p>':'')+(x.url?'<a href="'+esc(link(x.url))+'" target="_blank" rel="noopener">Visit website ↗</a>':'')+'</div></article>'}
 $('researchcards').innerHTML=exp.items.filter(x=>x.group==='Research').map(card).join('');
 $('leadershipcards').innerHTML=exp.items.filter(x=>x.group!=='Research').map(card).join('');
+
+fetch('content/articles.json')
+  .then(response => {
+    if (!response.ok) throw new Error('Articles could not load');
+    return response.json();
+  })
+  .then(data => {
+    $('articlecards').innerHTML = (data.items || []).map(article => `
+      <article class="card">
+        ${article.image
+          ? `<img src="${esc(image(article.image))}" alt="${esc(article.title)}">`
+          : ''}
+        <div class="cardbody">
+          <div class="meta">${esc(article.category || '')}</div>
+          <h3>${esc(article.title)}</h3>
+          <p>${esc(article.description || '')}</p>
+          <a href="${esc(link(article.url))}"
+             target="_blank" rel="noopener">
+            Read Article ↗
+          </a>
+        </div>
+      </article>
+    `).join('');
+  })
+  .catch(error => console.error(error));
+
 const categories=['All',...new Set(op.items.map(x=>x.category))];let selected='All';
 $('filters').innerHTML=categories.map(c=>'<button class="filter'+(c==='All'?' active':'')+'" data-category="'+esc(c)+'">'+esc(c)+'</button>').join('');
 function render(){let q=$('search').value.toLowerCase();let items=op.items.filter(x=>(selected==='All'||x.category===selected)&&[x.title,x.organization,x.category,x.notes].join(' ').toLowerCase().includes(q));$('oppgrid').innerHTML=items.map(x=>'<article class="opp"><div class="eyebrow">'+esc(x.category)+'</div><h3>'+esc(x.title)+'</h3><strong>'+esc(x.organization)+'</strong><p>'+esc(x.notes)+'</p><p>'+esc(x.status)+'</p><a href="'+esc(link(x.url))+'" target="_blank" rel="noopener">Explore opportunity ↗</a></article>').join('')||'<p>No matching results.</p>'}
